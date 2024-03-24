@@ -84,6 +84,17 @@ export default function (this: InjectBackgroundAcceptContext, source: string) {
         sendResponse({reloaded: true})
         chrome.runtime.reload()
       }
+
+      // Reload the active tab and the extension
+      if (request.changedFile === 'USER_REQUEST') {
+        sendResponse({reloaded: true})
+        chrome.runtime.reload()
+
+        chrome.tabs.query({}, (tabs) => {
+          if (!tabs) return
+          tabs.forEach((tab) => chrome.tabs.reload(tab.id))
+        })
+      }
   
       return true
     }

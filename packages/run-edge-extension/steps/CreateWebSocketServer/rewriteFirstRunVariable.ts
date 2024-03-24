@@ -6,7 +6,7 @@ export default function rewriteFirstRunVariable() {
   const firstRun = isFirstRun()
   const filePath = path.resolve(
     __dirname,
-    './extensions/manager-extension/initialTab.js'
+    './extensions/manager-extension/tools/initialTab.js'
   )
 
   fs.readFile(filePath, 'utf8', (err, data) => {

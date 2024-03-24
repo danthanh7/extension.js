@@ -4,7 +4,7 @@ import fs from 'fs'
 export default function replacePortInFile(port: number) {
   const filePath = path.resolve(
     __dirname,
-    './extensions/reload-extension/reloadService.js'
+    './extensions/manager-extension/tools/reloadService.js'
   )
 
   fs.readFile(filePath, 'utf8', (err, data) => {
