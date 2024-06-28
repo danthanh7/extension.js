@@ -42,5 +42,7 @@
     "browser-extension-test-data",
     "__TEST__/*"
   ],
-  "dependencies": {}
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.18.0"
+  }
 }
