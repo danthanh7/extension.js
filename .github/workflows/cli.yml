@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install
+      run: npm install --no-optional
     - name: Run compiler
       run: npm run compile
     - name: Run `extenion` cli without arguments
