@@ -4,7 +4,7 @@
     "clean": "turbo clean && rm -rf node_modules",
     "changeset": "changeset",
     "compile": "dotenv -- turbo run compile",
-    "cleanInstall": "rm -rf package-lock.json && npm install && npm run compile && npm run format && npm run lint && tsc --noEmit && npm run test",
+    "cleanInstall": "yarn cache clean && yarn clean && rm -rf yarn.lock && yarn install && yarn compile && yarn format && yarn lint && yarn tsc --noEmit && yarn test",
     "extension": "dotenv -- ts-node ./programs/cli/dist/cli.js",
     "format": "prettier --write \"**/*.{ts,tsx,md,js,json}\"",
     "lint": "eslint . --config .eslintrc.js",
@@ -17,7 +17,7 @@
     "types": "tsc --noEmit --project tsconfig.json",
     "version-packages": "changeset version",
     "publish-packages": "turbo run compile lint test && changeset version && changeset publish",
-    "watch": "npm run compile && dotenv -- turbo run watch --filter=./packages/* --filter=./programs/* --concurrency=24"
+    "watch": "yarn compile && dotenv -- turbo run watch --filter=./packages/* --filter=./programs/* --concurrency=24"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
@@ -33,7 +33,7 @@
     "turbo": "^2.0.4"
   },
   "name": "extension",
-  "packageManager": "npm@10.5.0",
+  "packageManager": "yarn@1.22.19",
   "description": "The monorepo of all things Extension.js, including the Extension.js CLI, its programs, packages, website, and documentation.",
   "workspaces": [
     "aliases/*",

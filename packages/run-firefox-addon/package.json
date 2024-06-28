@@ -21,7 +21,7 @@
     "clean": "rm -rf dist",
     "compile:plugin": "tsup-node ./module.ts ./loaders/* --format cjs --dts --target=node18 --minify && node ./copyExtensions.js",
     "compile:web": "tsup-node ./minimum-background-file.ts --format esm --dts --target=node18 --minify --config=tsconfig.web.json",
-    "compile": "npm run compile:plugin && npm run compile:web",
+    "compile": "yarn compile:plugin && yarn compile:web",
     "lint": "eslint \"./**/*.ts*\"",
     "test": "echo \"Note: no test specified\" && exit 0",
     "test:fixture": "yarn --cwd=./fixtures/dev-server-no-hmr dev",

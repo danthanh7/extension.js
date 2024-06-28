@@ -40,31 +40,31 @@ Extension.js includes several command line programs, each serving a specific pur
 ## Installation
 
 1. Clone the project `git@github.com:cezaraugusto/extension.git` && `cd extension`.
-2. Install dependencies (will symlink files where appropriate) `npm install`
+2. Install dependencies (will symlink files where appropriate) `yarn install`
 3. Create an `.env` file at the project root and add `EXTENSION_ENV=development`
 
 ## Usage
 
 To watch and apply changes to the project, you will need two or more terminals open:
 
-### Terminal 1: Use it to watch file changes (npm run watch)
+### Terminal 1: Use it to watch file changes (yarn watch)
 
 ```sh
-npm run watch
+yarn watch
 ```
 
 > **NOTE:** The browser runners (`run-chrome-extension` and `run-edge-extension`) are not
 > watched by default, since they trigger the execution of the browser binary. To see changes
-> applied to these packages, apply a `npm run compile` command either globally (at project root)
-> or individually (running `npm run compile` at the package folder level).
+> applied to these packages, apply a `yarn compile` command either globally (at project root)
+> or individually (running `yarn compile` at the package folder level).
 
 ### Terminal 2: Use it to actually execute the commands you want to test.
 
-The CLI is available internally as an npm script `npm run extension <command> [argument]`.
+The CLI is available internally as an npm script `yarn extension <command> [argument]`.
 Use it to experiment with the multiple Extension.js CLI commands.
 
 ```sh
-npm run extension <command> [argument]
+yarn extension <command> [argument]
 ```
 
 ## Useful Commands
@@ -77,7 +77,7 @@ and are needed for the project development.
 This is the same command users run when they do `npx extension <command>
 
 ```sh
-npm run extension <command> [args] [flags]
+yarn extension <command> [args] [flags]
 ```
 
 ### `compile`
@@ -85,7 +85,7 @@ npm run extension <command> [args] [flags]
 Compiles (builds) packages and programns. This npm script generates the `/dist` folder that other packages may consume.
 
 ```sh
-npm run compile
+yarn compile
 ```
 
 ### `watch`
@@ -95,7 +95,7 @@ Like compile, but listens for code changes, where it compiles again.
 > Note: You want a terminal always running this command during development.
 
 ```sh
-npm run watch
+yarn watch
 ```
 
 ### `lint`
@@ -103,7 +103,7 @@ npm run watch
 Iterates over all projects and lint them using ESLint.
 
 ```sh
-npm run lint
+yarn lint
 ```
 
 ### `test`
@@ -111,7 +111,7 @@ npm run lint
 Run the test suite of each package and program (where available).
 
 ```sh
-npm run test
+yarn test
 ```
 
 ### `clean`
@@ -119,5 +119,5 @@ npm run test
 Deletes cache, dist/ and node_modules/ across packages and programs .
 
 ```sh
-npm run clean
+yarn clean
 ```

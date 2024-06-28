@@ -19,10 +19,10 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "watch": "npm run compile --watch",
+    "watch": "yarn compile --watch",
     "compile:plugin": "tsup-node ./module.ts ./resolver-module.ts ./loader.ts --format cjs --dts --target=node18 --minify",
     "compile:web": "tsup-node ./resolver-module.ts --format esm --dts --target=node18 --minify --config=tsconfig.web.json",
-    "compile": "npm run compile:plugin && npm run compile:web",
+    "compile": "yarn compile:plugin && yarn compile:web",
     "lint": "eslint \"./**/*.ts*\"",
     "test": "jest"
   },

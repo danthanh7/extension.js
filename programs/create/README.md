@@ -7,7 +7,7 @@ This package stores all logic needed by Extension.js to create new projects.
 ## Installation
 
 ```
-npm install @extension-create/create
+yarn add @extension-create/create
 ```
 
 ## Usage

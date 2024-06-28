@@ -23,7 +23,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "watch": "npm run compile --watch",
+    "watch": "yarn compile --watch",
     "compile": "tsup-node ./module.ts --format cjs --dts --target=node18 --minify && node ./copyTemplates.js",
     "lint": "eslint \"./**/*.ts*\"",
     "test": "echo \"Note: no test specified\" && exit 0"
