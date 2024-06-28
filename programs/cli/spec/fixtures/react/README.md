@@ -24,12 +24,12 @@ yarn dev
 yarn start
 ```
 
-### yarn build
+### npm run build
 
 ```
 // Builds the app for production.
 // Bundles your browser extension in production mode for the target browser.
-yarn run build
+npm run build
 ```
 
 ## Learn More

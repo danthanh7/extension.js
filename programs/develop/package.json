@@ -23,12 +23,12 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "watch": "yarn compile --watch",
+    "watch": "npm run compile --watch",
     "compile:types-folder": "node ./scripts/copyTypesFolder.js",
     "compile:stylelint-config": "node ./scripts/copyStylelintConfig.js",
     "compile:tailwind-config": "node ./scripts/copyTailwindConfig.js",
     "compile:program": "tsup-node ./module.ts --format cjs --dts --target=node18 --minify",
-    "compile": "yarn compile:types-folder && yarn compile:stylelint-config && yarn compile:tailwind-config && yarn compile:program",
+    "compile": "npm run compile:types-folder && npm run compile:stylelint-config && npm run compile:tailwind-config && npm run compile:program",
     "lint": "eslint \"./**/*.ts*\"",
     "test": "echo \"Note: no test specified\" && exit 0"
   },
