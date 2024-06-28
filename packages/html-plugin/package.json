@@ -22,11 +22,11 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "watch": "yarn compile --watch",
+    "watch": "npm run compile --watch",
     "compile:plugin": "tsup-node ./module.ts ./loaders/InjectHmrAcceptLoader.ts --format cjs --dts --target=node18 --minify",
     "compile:web": "tsup-node ./minimum-script-file.ts --format esm --dts --target=node18 --minify --config=tsconfig.web.json",
     "compile:css": "copy-file './minimum-css-file.css' dist/minimum-css-file.css",
-    "compile": "yarn compile:web && yarn compile:css && yarn compile:plugin",
+    "compile": "npm run compile:web && npm run compile:css && npm run compile:plugin",
     "lint": "eslint \"./**/*.ts*\"",
     "test": "jest"
   },

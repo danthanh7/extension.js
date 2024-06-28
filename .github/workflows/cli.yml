@@ -6,8 +6,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: npm install
     - name: Run compiler
-      run: yarn compile
+      run: npm run compile
     - name: Run `extenion` cli without arguments
-      run: yarn test:cli
+      run: npm run test:cli
