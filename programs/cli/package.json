@@ -70,9 +70,5 @@
     "tsconfig": "*",
     "tsup": "^8.0.1",
     "typescript": "5.3.3"
-  },
-  "resolutions": {
-    "wrap-ansi": "7.0.0",
-    "string-width": "4.1.0"
   }
 }
