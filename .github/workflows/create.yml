@@ -24,4 +24,4 @@ jobs:
     - name: Run compiler
       run: pnpm compile
     - name: Run `extension create` command
-      run: pnpm test:create
+      run: EXTENSION_ENV=development pnpm test:create
