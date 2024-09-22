@@ -1,5 +1,5 @@
 {
-  "name": "Special Folders Pages Template",
+  "name": "Special Folders Pages",
   "version": "0.0.1",
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "manifest_version": 3,
@@ -12,7 +12,7 @@
     "firefox:scripts": ["background.js"]
   },
   "action": {
-    "default_popup": "pages/main.html"
+    "default_popup": "main.html"
   },
   "sandbox": {
     "pages": ["sandbox/index.html"]

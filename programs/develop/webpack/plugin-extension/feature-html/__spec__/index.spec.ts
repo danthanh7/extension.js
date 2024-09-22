@@ -49,7 +49,7 @@ describe('HtmlPlugin (default behavior)', () => {
   })
 
   const sandboxHtml = path.join(outputPath, 'sandbox', 'page-0.html')
-  const pagesHtml = path.join(outputPath, 'pages', 'main.html')
+  const pagesHtml = path.join(outputPath, 'pages', 'custom.html')
   const excludedHtml = path.join(outputPath, '/', 'html', 'file.html')
 
   describe('html', () => {

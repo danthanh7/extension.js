@@ -1,5 +1,5 @@
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.tabs.create({
+browser.runtime.onInstalled.addListener(() => {
+  browser.tabs.create({
     url: './pages/main.html'
   })
 })

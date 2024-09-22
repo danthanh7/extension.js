@@ -1,12 +1,11 @@
-const contentComponent = `<div class="content_script-box">
-  <div class="content_script-header">
-    <img class="content_script-logo" src="/logo.png" />
-  </div>
-  <h1 class="content_script-title">
-    Change the background-color ⬇
+import logo from '../images/logo.png'
+
+const contentComponent = `<div class="content_script">
+  <img class="content_logo" src="${logo}" />
+  <h1 class="content_title">
+    Welcome to your ESModule Extension
   </h1>
-  <input type="color" class="content_script-colorPicker" id="colorPicker">
-  <p class="content_script-description">
+  <p class="content_description">
     Learn more about creating cross-browser extensions at <a
       className="underline hover:no-underline"
       href="https://extension.js.org"
