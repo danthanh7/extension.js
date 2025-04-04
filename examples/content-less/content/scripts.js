@@ -1,5 +1,5 @@
-import './styles.less?inline_style'
 import logo from '../images/logo.svg'
+// import './styles.less'
 
 let unmount
 

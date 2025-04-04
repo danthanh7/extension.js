@@ -1,4 +1,3 @@
-import styles from './Logo.module.css?inline_style'
 import logo from '../images/logo.png'
 
 let unmount
