@@ -69,10 +69,3 @@ export async function getProjectPath(pathOrRemoteUrl: string | undefined) {
 
   return path.resolve(process.cwd(), pathOrRemoteUrl)
 }
-
-export function getProjectOutputPath(projectPath: string, browser: string) {
-  const distPath = path.join(projectPath, 'dist', browser)
-  const outputPath = fs.existsSync(distPath) ? distPath : projectPath
-
-  return outputPath
-}

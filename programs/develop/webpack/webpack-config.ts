@@ -9,7 +9,6 @@ import * as path from 'path'
 import * as fs from 'fs'
 import {type Configuration} from '@rspack/core'
 import {DevOptions} from '../commands/commands-lib/config-types'
-import {getProjectOutputPath} from '../commands/commands-lib/get-project-path'
 
 // Plugins
 import {CompilationPlugin} from './plugin-compilation'
@@ -30,6 +29,7 @@ export default function webpackConfig(
   } & {
     output: {
       clean: boolean
+      path: string
     }
   }
 ): Configuration {
@@ -38,15 +38,14 @@ export default function webpackConfig(
     JSON.parse(fs.readFileSync(manifestPath, 'utf-8')),
     devOptions.browser
   )
-  const userExtensionOutputPath = getProjectOutputPath(
-    projectPath,
-    devOptions.browser
-  )
+  const userExtensionOutputPath = devOptions.output.path
   const managerExtensionPath = path.join(
     __dirname,
     'extensions',
     `${devOptions.browser}-manager-extension`
   )
+
+  console.log('dirname caralho', managerExtensionPath)
 
   const browser = devOptions.chromiumBinary
     ? 'chromium-based'
@@ -65,7 +64,7 @@ export default function webpackConfig(
         : 'eval-cheap-source-map',
     output: {
       clean: devOptions.output?.clean,
-      path: userExtensionOutputPath,
+      path:  userExtensionOutputPath,
       // See https://webpack.js.org/configuration/output/#outputpublicpath
       publicPath: '/',
       hotUpdateChunkFilename: 'hot/[id].[fullhash].hot-update.js',
